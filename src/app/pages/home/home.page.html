@@ -1,0 +1,83 @@
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu" >
+    <ion-content style="background-color: black;" >
+      <div style="background-color: black;">
+      <div class="sidebar-header">
+        <img class="img-fluid mCS_img_loaded" src="assets/images/Profile.png" width="170" alt="" class="center">
+        <div class="text-center">
+          <button class="btn btn-round mt-2 mb-2 btn-sm btn-round px-5"
+              (click)="editprofile()">Edit Profile</button>
+        </div>
+      </div>
+
+      <ion-list>
+        <ion-item class="menu-item" (click)="booknow()"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;" > My Bookings</ion-item>
+        <ion-item class="menu-item"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;"> Membership</ion-item>
+        <ion-item class="menu-item"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;"> Change Password</ion-item>
+        <ion-item class="menu-item" (click)="contactus()"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;" > Contact Us</ion-item>
+        <ion-item class="menu-item"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;"> Privacy Policy</ion-item>
+        <ion-item class="menu-item"><img src="assets/images/beeinsetting.png" width="25" style="margin: 10px;"> Terms & Conditions</ion-item>
+
+      </ion-list></div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <div id="container">
+      
+          <div class="col-12 d-flex align-items-center justify-content-center">
+              <div class="col-sm-10 col-md-6 p-0 mt-2 wow fadeInDown">
+
+                <div class="btn-group btn-round" style="width:100%">
+                  <button class="custombtn" (click)="buzzparty()">BUZZ PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">VIP PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">SUPER HERO PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">FAIRY PARTY</button>
+                </div>
+                  
+                <div class="btn-group" style="width:100%">
+                  <button class="custombtn" (click)="buzzparty()">COMBAT ATTACK PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">PRINCESS PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">PIRATE PARTY</button>
+                  <button class="custombtn" (click)="buzzparty()">UNICORN PARTY</button>
+                </div>
+                          <img src="assets/images/hexagonalimageofparty.png" class="logo mb-1 mt-3 d-block mx-auto"
+                              alt="logo">
+                         <h6>Buzz</h6>
+                         <h6>Party</h6>
+                            <p>
+                              <u>
+                                Learn More
+                              </u>
+                             
+                            </p>
+                          
+                         <div class="login-form c-form">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      
+                                      <div class="text-center">
+                                          <button class="btn btn-primary mt-2 btn-sm btn-round px-5"
+                                              (click)="booknow()">Book Now</button>
+                                          
+                                            </div>
+                                  </div>
+                              </div>
+                  </div>
+                  <div class="navbar">
+                    <button style="width: 25%; background-color: transparent;" (click)="openCustom()"><img src="assets/images/menu.png" width="90%" class="img-fluid d-block mx-auto"
+                      alt="logo"></button>
+                      <button style="width: 25%; background-color: transparent;" (click)="gotofoodmenu()"><img src="assets/images/foodbutton.png" width="90%" class="img-fluid d-block mx-auto"
+                        alt="logo"></button>
+                        <button style="width: 25%; background-color: transparent;"><img src="assets/images/call.png" width="90%" class="img-fluid d-block mx-auto"
+                          alt="logo"></button>
+                          <button style="width: 25%; background-color: transparent;" (click)="gotonotification()"><img src="assets/images/notificationbutton.png" width="90%" class="img-fluid d-block mx-auto"
+                            alt="logo"></button>
+                          </div>
+                    
+              </div>
+          </div>
+    
+  </div>
+</ion-content>

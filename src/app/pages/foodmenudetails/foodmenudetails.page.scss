@@ -1,0 +1,43 @@
+hr {
+    border: 1px dotted black;
+    width: 100%;
+  }
+  .imgmedia{
+    border-radius: 10% !important;
+     vertical-align: middle;
+     border-style: none;
+     height: 17vh;
+     width: 100%;
+     padding: 5px;
+ }
+ .col-4,.col-6{
+  position: relative;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.card {
+  box-shadow: 0 1px 15px 1px rgba(123, 123, 123, 0.16);
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+.h4, h5, h6 {
+   margin-top: 0px; 
+   margin-bottom: 0px; 
+  font-weight: 500;
+  line-height: 1.2;
+}
+.btn-primary, .btn-primary:hover, .list-group-item.active {
+  color: #fff;
+  background: black;
+  height: 4vh;
+  border-color: transparent;
+  box-shadow: 2px 2px 8px 2px #2546a545;
+}
+btn-group-sm>.btn, .btn-sm {
+  padding: .25rem .5rem;
+  font-size: .675rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+}

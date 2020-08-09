@@ -1,0 +1,57 @@
+ion-slides {
+    height: 30%;
+}
+    .swiper-slide  img{
+        background: no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  }
+  .card {
+    box-shadow: 15px rgba(123, 123, 123, 0.16);
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 10000;
+    margin: -20px 10px 10px 10px;
+}
+.card1 {
+    box-shadow: 15px rgba(123, 123, 123, 0.16);
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 10000;
+    margin: 10px 10px 10px 10px;
+}
+.imgmedia{
+    border-radius: 10% !important;
+     vertical-align: middle;
+     border-style: none;
+     height: 17vh;
+     width: 100%;
+     padding: 5px;
+ }
+ .imgmedia1{
+    border-radius: 10% !important;
+     vertical-align: middle;
+     border-style: none;
+     height: 17vh;
+     width: 100%;
+     padding: 5px;
+     filter: blur(1px); 
+ }
+ p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 600;;
+    transform: translate(-50%, -50%);
+    color: white;
+ }
+ .col-4,.col-6{
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
