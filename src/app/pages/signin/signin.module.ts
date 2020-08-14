@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, FormBuilder } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SigninPageRoutingModule } from './signin-routing.module';
 import { SigninPage } from './signin.page';
@@ -10,6 +10,7 @@ import { SigninPage } from './signin.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     SigninPageRoutingModule,
   ],
   declarations: [SigninPage]

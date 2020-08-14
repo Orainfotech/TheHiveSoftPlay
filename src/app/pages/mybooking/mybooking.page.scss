@@ -39,3 +39,15 @@
 .img-fluid{
   height: 20vh;
 }
+.bookingdetails{
+  background-color: black;
+    color: white;
+    padding: 0px;
+    width: 40vw;
+    margin: 10px;
+    font-size: 5vw;
+    border-radius: 10vw;
+}
+textarea::-webkit-input-placeholder {
+  color: #0bf;
+}

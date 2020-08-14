@@ -1,0 +1,38 @@
+.form{
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+  }
+  .background{
+background-color: var(--p-color);
+padding: 5px;  
+width: 100%;
+    height: 100%;
+}
+ion-content  {
+  --background: #FDE277;
+}
+.btn-primary,
+.btn-primary:hover,
+.list-group-item.active {
+  color: #fff;
+  background: black;
+  border-color: transparent;
+  box-shadow: 2px 2px 8px 2px #2546a545;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  position:relative;
+margin-top:100%;
+}
+p{
+    font-size: 35px;
+    color: black;
+    font-weight: 600;
+    margin: 10px;
+}
+dl{
+    margin: 20px;
+}
+.logo{
+  width: 55vw;
+}

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { CommonService } from './utills/common.service';
 import { AuthService } from './services/auth-service/auth-service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -36,38 +37,6 @@ export class AppComponent  {
       this.statusBar.backgroundColorByHexString('#2342a4');
       this.statusBar.styleLightContent();
 
-      this.platform.backButton.subscribeWithPriority(0, () => {
-        if (this.routerOutlet && this.routerOutlet.canGoBack()) {
-          this.routerOutlet.pop();
-        } else if (this.router.url === '/signin') {
-
-          if (this.counter == 2) {
-            navigator['app'].exitApp();
-          } else {
-            this.common.showToast('Press again to exit');
-            this.counter++;
-          }
-
-          setTimeout(() => {
-            this.counter = 1;
-          }, 3000);
-        } else if (this.router.url === '/home') {
-          if (this.routerOutlet && this.routerOutlet.canGoBack()) {
-            this.routerOutlet.pop();
-          } else if (this.router.url === '/home') {
-            if (this.counter == 3) {
-              navigator['app'].exitApp();
-            } else if (this.counter == 2) {
-              this.common.showToast('Press again to exit');
-            }
-            this.counter++;
-
-            setTimeout(() => {
-              this.counter = 1;
-            }, 3000);
-          }
-        }
-      });
     });
     var loginParam = this.auth.getSecureToken();
     if (loginParam != null && loginParam != '' && loginParam != undefined) {
@@ -77,9 +46,9 @@ export class AppComponent  {
       this.navctrl.navigateRoot('signin');
     }
    
-    this.platform.backButton.subscribeWithPriority(0, () => {
+    this.platform.backButton.subscribeWithPriority(10, () => {
       if (this.routerOutlet && this.routerOutlet.canGoBack()) {
-        this.routerOutlet.pop();
+        this.navctrl.pop();
       } else if (this.router.url === '/home') {
 
         if (this.counter == 2) {

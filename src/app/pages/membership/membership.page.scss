@@ -1,0 +1,56 @@
+.form{
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+  }
+  .background{
+background-color: var(--p-color);
+padding: 5px;  
+width: 100%;
+    height: 100%;
+}
+ion-content  {
+  --background: #FDE277;
+}
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 10px;
+  word-wrap: break-word;
+  background-color: #e0ac08;
+  background-clip: border-box;
+  border: 4px solid;
+  border-radius: 0.25rem;
+
+}
+
+.card1{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 10px;
+  word-wrap: break-word;
+  background-color: #ceccc7;
+  background-clip: border-box;
+  border: 4px solid;
+  border-radius: 0.25rem;
+
+}
+p{
+  font-size: 7vw;
+  color: black;
+  font-weight: 600;
+  margin: 10px;
+}
+.btn-primary, .btn-primary:hover, .list-group-item.active {
+  color: white;
+  /* padding: 10px; */
+  background: black;
+  font-size: 20px;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: -35px;
+
+  }

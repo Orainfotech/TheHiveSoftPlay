@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AlertController, ToastController, LoadingController, NavController, Platform } from '@ionic/angular';
 import * as $ from 'jquery';
+import { Device } from '@ionic-native/device/ngx';
 
 
 @Injectable({
@@ -10,6 +11,7 @@ export class CommonService {
 
   loading: any;
   userData: any = [];
+  id: any;
   pattern:any="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]*\.([a-z]{2,4})$/" ;
 
   constructor(
@@ -18,6 +20,7 @@ export class CommonService {
     public loadingController: LoadingController,
     public navCtrl: NavController,
     public platform: Platform,
+    public device:Device
   ) {
     this.platform.ready().then(() => {
     });
@@ -62,6 +65,14 @@ export class CommonService {
       }
     }, 100);
     $('ion-loading').remove();
+  }
+  getUniqueId() {
+    this.id = this.device.uuid;
+    if (this.device.uuid == '') {
+      return 'not found';
+    } else {
+      return this.id;
+    }
   }
 
 

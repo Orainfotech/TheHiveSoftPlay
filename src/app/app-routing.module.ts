@@ -62,6 +62,22 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'membership',
+    loadChildren: () => import('./pages/membership/membership.module').then( m => m.MembershipPageModule)
+  },
+  {
+    path: 'privacy-policy',
+    loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+  },
+  {
+    path: 'termsand-conditions',
+    loadChildren: () => import('./pages/termsand-conditions/termsand-conditions.module').then( m => m.TermsandConditionsPageModule)
+  },
+  {
+    path: 'changepassword',
+    loadChildren: () => import('./pages/changepassword/changepassword.module').then( m => m.ChangepasswordPageModule)
   }
 ];
 

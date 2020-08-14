@@ -1,70 +1,37 @@
-
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Notification</ion-title>
+    </ion-toolbar>
+  </ion-header>
 <ion-content>
-    <div class="main-wrapper pt-0">
+    <div class="main-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    
-                    <ul class="nav nav-tabs nav-linetriangle">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="baseIcon-tab1" data-toggle="tab" aria-controls="tab1"
-                                href="#tab1" aria-expanded="true"><i class="icon-docs"></i> Agenda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="baseIcon-tab2" data-toggle="tab" aria-controls="tab2" href="#tab2"
-                                aria-expanded="false"><i class="icon-clock"></i> Minute of Meeting</a>
-                        </li>
-                    </ul>
+                    <img src="assets/images/booknow.png" width="100%" class="img-fluid d-block mx-auto"
+                    alt="logo">
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="tab1" aria-expanded="true"
-                            aria-labelledby="baseIcon-tab1">
-                            <div class="datepicker"></div>
-                            <div class="card list-card">
+                        <div role="tabpanel" class="tab-pane active" id="tab1" aria-expanded="true" aria-labelledby="baseIcon-tab1">
+                            <div class="datepicker hasDatepicker">
+                                <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+                                    <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+                                        <a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev">
+                                            <span class="ui-icon ui-icon-circle-triangle-w">Prev</span>
+                                        </a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next">
+                                            <span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+                                            <div class="ui-datepicker-title">
+                                                <select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7" selected="selected">Aug</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select>
+                                                <select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020" selected="selected">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option></select></div></div>
+                                                <table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">1</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">8</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">9</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">15</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">22</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">29</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2020"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div>
+                            
+                            <!-- <div class="card list-card mt-2">
                                 <div class="card-header teal text-white">
-                                    <a class="text-decoration-none d-block collapse-title collapsed text-success"
-                                        data-toggle="collapse" href="#collapse1" aria-expanded="false"
-                                        aria-controls="collapse1"><span class="event-date">25/06/2019</span> <i
-                                            class="fa fa-angle-double-right mx-1"></i> General
-                                        Board Meeting</a>
-                                </div>
-                                <div class="collapse" id="collapse1">
-                                    <div class="card-body">
-                                        <div class="event-details">
-                                            <div class="clearfix">
-                                                <div class="float-left">
-                                                    <h4 class="event-datetime">
-                                                        <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                    </h4>
-                                                </div>
-                                                <div class="float-right">
-                                                    <h4 class="event-datetime">
-                                                        <i class="fa fa-clock"></i> 11:00 AM
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                            <h4 class="event-name"><i class="fa fa-donate"></i>General Board Meeting
-                                            </h4>
-                                            <h4 class="event-address">
-                                                <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                Gujarat
-                                            </h4>
-                                            <h4>
-                                                <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                            </h4>
-                                            <h4>
-                                                <a href="#" data-toggle="modal" data-target=".avail-modal">Are you
-                                                    Available ?</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card list-card">
-                                <div class="card-header teal text-white">
-                                    <a class="text-decoration-none d-block collapse-title collapsed text-danger"
-                                        data-toggle="collapse" href="#collapse2" aria-expanded="false"
-                                        aria-controls="collapse2"><span class="event-date">25/06/2019</span> <i
-                                            class="fa fa-angle-double-right mx-1"></i> AGM</a>
+                                    <a class="text-decoration-none d-block collapse-title collapsed text-danger" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2"><span class="event-date">25/06/2019</span> 
+                                        <i class="fa fa-angle-double-right mx-1"></i>B'day Party Booking </a>
                                 </div>
                                 <div class="collapse" id="collapse2">
                                     <div class="card-body">
@@ -72,7 +39,7 @@
                                             <div class="clearfix">
                                                 <div class="float-left">
                                                     <h4 class="event-datetime">
-                                                        <i class="fa fa-calendar-check"></i> 25/03/2019
+                                                        <i class="fa fa-calendar-check"></i> 25/10/2020
                                                     </h4>
                                                 </div>
                                                 <div class="float-right">
@@ -81,10 +48,10 @@
                                                     </h4>
                                                 </div>
                                             </div>
-                                            <h4 class="event-name"><i class="fa fa-donate"></i>Annual General Meeting
+                                            <h4 class="event-name"><i class="fa fa-donate"></i> SuperMan Bday party Celebration
                                             </h4>
                                             <h4 class="event-address">
-                                                <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
+                                                <i class="fa fa-map-marker-alt"></i> Reliace Circle, Gandhinagar,
                                                 Gujarat
                                             </h4>
                                             <h4>
@@ -97,299 +64,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="tab2" aria-expanded="true"
-                            aria-labelledby="baseIcon-tab2">
-                            <div class="datepicker"></div>
-                            <div class="card-list">
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-success"
-                                            data-toggle="collapse" href="#collapse11" aria-expanded="false"
-                                            aria-controls="collapse11"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> General
-                                            Board Meeting</a>
-                                    </div>
-                                    <div class="collapse" id="collapse11">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>General Board Meeting
-                                                </h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button
-                                                        class="btn btn-primary btn-round btn-sm mt-2">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-danger"
-                                            data-toggle="collapse" href="#collapse12" aria-expanded="false"
-                                            aria-controls="collapse12"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> AGM</a>
-                                    </div>
-                                    <div class="collapse" id="collapse12">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>Annual General
-                                                    Meeting</h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button
-                                                        class="btn btn-primary btn-round btn-sm mt-2">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-primary"
-                                            data-toggle="collapse" href="#collapse13" aria-expanded="false"
-                                            aria-controls="collapse13"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> DGM</a>
-                                    </div>
-                                    <div class="collapse" id="collapse13">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>DGM</h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button class="btn btn-primary btn-round btn-sm">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-success"
-                                            data-toggle="collapse" href="#collapse14" aria-expanded="false"
-                                            aria-controls="collapse14"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> General
-                                            Board Meeting</a>
-                                    </div>
-                                    <div class="collapse" id="collapse14">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>General Board Meeting
-                                                </h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button
-                                                        class="btn btn-primary btn-round btn-sm mt-2">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-danger"
-                                            data-toggle="collapse" href="#collapse15" aria-expanded="false"
-                                            aria-controls="collapse15"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> AGM</a>
-                                    </div>
-                                    <div class="collapse" id="collapse15">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>Annual General
-                                                    Meeting</h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button
-                                                        class="btn btn-primary btn-round btn-sm mt-2">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card list-card">
-                                    <div class="card-header teal text-white">
-                                        <a class="text-decoration-none d-block collapse-title collapsed text-primary"
-                                            data-toggle="collapse" href="#collapse16" aria-expanded="false"
-                                            aria-controls="collapse16"><span class="event-date">25/06/2019</span> <i
-                                                class="fa fa-angle-double-right mx-1"></i> DGM</a>
-                                    </div>
-                                    <div class="collapse" id="collapse16">
-                                        <div class="card-body">
-                                            <div class="event-details">
-                                                <div class="clearfix">
-                                                    <div class="float-left">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-calendar-check"></i> 25/03/2019
-                                                        </h4>
-                                                    </div>
-                                                    <div class="float-right">
-                                                        <h4 class="event-datetime">
-                                                            <i class="fa fa-clock"></i> 11:00 AM
-                                                        </h4>
-                                                    </div>
-                                                </div>
-                                                <h4 class="event-name"><i class="fa fa-donate"></i>DGM</h4>
-                                                <h4 class="event-address">
-                                                    <i class="fa fa-map-marker-alt"></i> GSPL Bhavan, Gandhinagar,
-                                                    Gujarat
-                                                </h4>
-                                                <h4>
-                                                    <i class="fa fa-download"></i> <a href="#">Download Attachment</a>
-                                                </h4>
-                                                <div class="">
-                                                    <textarea class="form-control" rows="3"
-                                                        placeholder="Add your comments.."></textarea>
-                                                    <button class="btn btn-primary btn-round btn-sm">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="notation mt-2">
-                        <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center">
-                            <li>
-                                <span class="notation-color bg-danger"></span>
-                                <a href="#">Expired</a>
-                            </li>
-                            <li>
-                                <span class="notation-color bg-success"></span>
-                                <a href="#">Read</a>
-                            </li>
-                            <li>
-                                <span class="notation-color bg-primary"></span>
-                                <a href="#">Unread</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
    
-    <div id="my-modal" class="modal fade avail-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="text-center m-auto">
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="radio1" name="radio1" class="custom-control-input">
-                            <label class="custom-control-label" for="radio1">Yes Available</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="radio2" name="radio1" class="custom-control-input">
-                            <label class="custom-control-label" for="radio2">Not Available</label>
-                        </div>
-                        <a href="#" data-dismiss="modal" class="text-yellow d-block font-weight-bold mt-2">Submit
-                            Answer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
    
   </ion-content>

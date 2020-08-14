@@ -1,5 +1,6 @@
 <ion-content>
-  <div class="login-wrapper">
+<ion-infinite-scroll>
+  <div class="login-wrapper" >
       <div class="flex-container">
           <div class="col-12 d-flex align-items-center justify-content-center">
               <div class="col-sm-10 col-md-6 p-0 wow fadeInDown">
@@ -7,6 +8,7 @@
                               alt="logo">
 
                           <div class="login-form c-form">
+                            <form [formGroup]="loginForm" > 
                               <div class="row">
                                 <div class="col-sm-12">
                                      <div class="form-group input-group">
@@ -15,50 +17,86 @@
                                               </span>
                                           </div>
                                           <ion-input type="email" class="form-control"
-                                              [(ngModel)]="email" placeholder="Email"></ion-input>
+                                              [(ngModel)]="email" placeholder="Email" formControlName="email"></ion-input>
                                               
                                       </div>
+                                      <div class="error-form"
+                                      *ngIf="loginForm.get('email').hasError('required') && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                                      <p>{{ validation_messages.email[0].message }}</p>
+                                  </div>
+                                  <div class="error-form"
+                                      *ngIf="loginForm.get('email').hasError('email') && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                                      <p>{{ validation_messages.email[1].message }}</p>
+                                  </div>
+                                 
+                                  <div class="error-form"
+                                      *ngIf="loginForm.get('email').hasError('patten') && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                                      <p>{{ validation_messages.email[2].message }}</p>
+                                  </div>
                                       <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
                                             </span>
                                         </div>
                                         <ion-input type="{{type}}" class="form-control" maxlength="10" id="password"
-                                            [(ngModel)]="password" placeholder="Password"></ion-input>
+                                            [(ngModel)]="password" placeholder="Password" formControlName="password"></ion-input>
 
                                             <img *ngIf="showPass" src="assets/images/eye.png" style="position: relative;top: 10px; margin-right: 10px;"  height="22px" width="22px"  (click)="showPassword()">
                                             <img *ngIf="!showPass" src="assets/images/closeeye.png" style="position: relative;top: 10px; margin-right: 10px;"  height="22px" width="22px"  (click)="showPassword()">
 
                                         </div>
+                                        <div class="error-form"
+                                        *ngIf="loginForm.get('password').hasError('required') && (loginForm.get('password').dirty || loginForm.get('password').touched)"
+                                        >
+                                        <p>{{ validation_messages.password[0].message }}</p>
+                                    </div>
+                                    <div class="error-form"
+                                        *ngIf="loginForm.get('password').hasError('minlength') && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                                        <p>{{ validation_messages.password[1].message }}</p>
+                                    </div>
+                                    
+                                    <div class="error-form"
+                                        *ngIf="loginForm.get('password').hasError('maxlength') && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                                        <p>{{ validation_messages.password[2].message }}</p>
+                                    </div>
+                                    <div class="error-form"
+                                        *ngIf="loginForm.get('password').hasError('patten') && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                                        <p>{{ validation_messages.password[3].message }}</p>
+                                    </div>
                                     <div class=text-right>
-                                        <p (click)="forgotpassword()">
+                                        <h6 (click)="forgotpassword()">
                                             Forgot Password?
-                                        </p>
+                                        </h6>
                                     </div>
                                       <div class="text-center">
-                                          <button class="btn btn-primary mt-4 btn-sm btn-round px-5"
-                                              (click)="login()">Sign In</button>
+                                          <button class="btn btn-primary mt-4 btn-sm btn-round px-2"
+                                          [disabled]="loginForm.invalid"
+                                           (click)="login()">Sign In</button>
                                              
-                                              <img src="assets/images/or.png" width="40vw" class="img-fluid mb-3 mt-3 d-block mx-auto"
+                                              <img src="assets/images/or.png" width="25vw" class="img-fluid mb-2 mt-2 d-block mx-auto"
                                               alt="logo">
 
-                                              <img src="assets/images/google_signin.png" class="img-fluid1 mb-4 d-block mx-auto"
-                                              alt="logo">
-                                            
+                                              
+                                              <button class="btn btn-primary  btn-sm btn-round px-2"
+                                               > <img src="assets/images/search.png" class="img-fluid1 mr-1"
+                                               alt="logo">Sign In with Google</button>
+                                             
+                                              
                                             </div>
                                             
                                             <div class=text-center>
-                                                <p (click)="signup()">
+                                                <h6 (click)="signup()">
                                                     Don't have an account yet? Sign Up 
-                                                </p>
+                                                </h6>
                                             </div>
                                   </div>
 
                               </div>
+                              </form>
                           </div>
                       </div>
                   </div>
-              </div>
-         
-  </div>
+              </div>    
+       </div>
+</ion-infinite-scroll>
 </ion-content>

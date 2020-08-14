@@ -1,0 +1,28 @@
+
+
+.main-wrapper {
+    /* margin-top: 40px; */
+    min-height: 100%;
+    padding: 15px 0;
+    position: relative;
+    background: var(--p-color);
+}
+.ui-datepicker {
+    width: 100%;
+}
+.ui-widget-header {
+    border: 0;
+    background: black;
+    color: #fff;
+    width: 101%;
+    font-weight: bold;
+    border-radius: 0 !important;
+    padding: 7px 0 !important;
+}
+td, th {
+    /* width: 4vw; */
+    height: 5vh;
+    font-size: 4vw;
+    padding: 2.4vw;
+    background-color: black;
+}

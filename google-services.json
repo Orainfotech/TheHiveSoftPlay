@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "21282153930",
+    "firebase_url": "https://thehivesoftplay-191e2.firebaseio.com",
+    "project_id": "thehivesoftplay-191e2",
+    "storage_bucket": "thehivesoftplay-191e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21282153930:android:93bdc1059aeb0dd48b5b33",
+        "android_client_info": {
+          "package_name": "com.TheHiveSoftPlay.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21282153930-jo2mp0slj8qupdpnbocqq19o9olj4rmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2waaIAi9VvkIXITY5o2t8iQJyL-R4JdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21282153930-jo2mp0slj8qupdpnbocqq19o9olj4rmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

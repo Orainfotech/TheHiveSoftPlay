@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { ApiService } from '../../services/api.service';
 import { CommonService } from '../../services/common.service';
 import { NetworkService } from '../../services/network.service';
+import {  FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-forgotpassword',
@@ -11,18 +12,41 @@ import { NetworkService } from '../../services/network.service';
 })
 export class ForgotpasswordPage implements OnInit {
   email:any;
-  constructor(public navctrl:NavController,
-    public api:ApiService,public common:CommonService,public net:NetworkService ) { }
+  public loginForm: FormGroup;
+  public validation_messages: any;
 
+  constructor(public navctrl:NavController,
+    public api:ApiService,
+    public common:CommonService,
+    public net:NetworkService,
+    public formbuilder:FormBuilder) {
+      this.formValidation();
+   }
+
+formValidation = (): void => {
+  this.loginForm = this.formbuilder.group({
+    
+      email: ['', Validators.compose([
+          Validators.required,
+          Validators.email,
+      ])]
+  });
+
+  this.validation_messages = {
+    
+      'email': [
+          { type: 'required', message: 'Email is required.' },
+          { type: 'email', message: 'Please enter valid email.' },
+          { type: 'patten', message: 'Please enter valid email.' },
+        ],
+      
+  }
+}
   ngOnInit() {
   }
   Forgotpassword(){
     if (this.net.netFlag) {
-      if (this.email ==null || this.email == undefined) {
-        this.common.showAlert("Please Enter Valid Email Id.!");
-        return;
-      }
-       else {
+     
         this.common.showLoading();
          const param = {
            email: this.email,
@@ -45,7 +69,7 @@ export class ForgotpasswordPage implements OnInit {
         }, error => {
          this.common.dismissLoading();
           })
-     }
+     
    } else {
      this.common.dismissLoading();
      this.common.showAlert('Please connect internet!');

@@ -14,6 +14,10 @@ import { NetworkService } from './services/network.service';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth-service/auth-service';
+import { Device } from '@ionic-native/device/ngx';
+import { FCM } from '@ionic-native/fcm/ngx';
+import { NotificationService } from './services/notification.service';
+import { FormBuilder } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +36,10 @@ import { AuthService } from './services/auth-service/auth-service';
     NetworkService,
     ApiService,
     AuthService,
+    Device,
+    FCM,
+    FormBuilder,
+    NotificationService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

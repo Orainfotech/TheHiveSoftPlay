@@ -1,10 +1,14 @@
 .btn-primary, .btn-primary:hover, .list-group-item.active {
-        color: #000;
-        background: var(--p-color);
-        border-color: #fde277;
-        height: 7vh;
-        width: 55vw;
-        font-size: 25px;
+    color: #000;
+    background: var(--p-color);
+    border-color: #fde277;
+    width: 60vw;
+    padding: 10px 0px 10px 0px;
+    font-size: 10px;
+}
+    .btn {
+        font-size: 17px;
+        font-weight: 500;
     }
     .align-items-center {
         -ms-flex-align: center!important;
@@ -13,6 +17,7 @@
     } 
 .login-wrapper::before{
         border: 10px solid #FDE277;
+        background-color: white;
         margin-bottom:0;
         border-radius: 0;
         padding: 0px;
@@ -22,7 +27,6 @@
     /* border-bottom: 0; */
     border-radius: 11px;
     background: #fff;
-    height: 9vh;
     box-shadow: 2px 2px 11px 1px #2546a517;
 }
 .form-control {
@@ -49,13 +53,20 @@
 }
 p{
     font-size: 15px;
-    color: var(--p-color);
+    color: red;
 }
 .logo{
-    height: 25vh;
     width: 60vw;
 }
 .img-fluid1{
-    width: 55vw;
-    height: 13vw;
+    width: 4vw;
+    height: 3vh;
+}
+h6 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 14px; 
+    color: var(--p-color);
 }
